@@ -12,7 +12,7 @@ jobs:
     steps:
     - run: deploy.sh
     env:
-      CF_ACCOUNT_ID: ${{ secrets.cfAccountId }}
-      CF_API_KEY: ${{ secrets.cfApiKey }}
-      CF_EMAIL: ${{ secrets.cfEmail }}
+      CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      CF_EMAIL: ${{ secrets.CF_EMAIL }}
       PROJECT_NAME: ${{ github.event.inputs.name }}
