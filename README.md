@@ -4,6 +4,8 @@ _Ad-hoc deployments for [Cloudflare Pages](https://pages.dev) projects using Git
 
 While Cloudflare Pages' API documentation is in development, this codebase is a glimpse at how to use the "Create deployment" endpoint to arbitrarily deploy existing projects, using GitHub Actions.
 
+**NOTICE** The API used in this project is subject to change, don't rely on it yet for production workflows!
+
 ## Setup
 
 [Fork this repository](https://github.com/signalnerve/pages-trigger/fork) and set the following secrets in your project's _Secrets_ page:
