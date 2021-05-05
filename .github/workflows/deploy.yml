@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - run: "echo 'Missing project name in repository_dispatch client_payload'; exit 1"
+      if: ${{ github.event_name == "repository_dispatch" && github.event.client_payload.project_name == null}}
     - run: ./deploy.sh
     env:
       CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
