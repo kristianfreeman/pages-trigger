@@ -1,5 +1,6 @@
 name: Deploy Pages project
 on:
+  repository_dispatch:
   workflow_dispatch:
     inputs:
       project_name:
@@ -16,4 +17,4 @@ jobs:
       CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
       CF_EMAIL: ${{ secrets.CF_EMAIL }}
-      PROJECT_NAME: ${{ github.event.inputs.project_name }}
+      PROJECT_NAME: ${{ github.event.inputs.project_name || github.event.client_payload.project_name }}
