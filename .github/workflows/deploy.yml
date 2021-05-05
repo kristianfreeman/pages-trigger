@@ -1,0 +1,18 @@
+name: Deploy Pages project
+on:
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: 'Project name to deploy'
+        required: true
+
+jobs:
+  deploy_project:
+    runs-on: ubuntu-latest
+    steps:
+    - run: deploy.sh
+    env:
+      CF_ACCOUNT_ID: ${{ secrets.cfAccountId }}
+      CF_API_KEY: ${{ secrets.cfApiKey }}
+      CF_EMAIL: ${{ secrets.cfEmail }}
+      PROJECT_NAME: ${{ github.event.inputs.name }}
