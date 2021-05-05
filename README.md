@@ -1,8 +1,8 @@
 # pages-trigger
 
-_Ad-hoc deployments for Pages projects using GitHub Actions_
+_Ad-hoc deployments for [Cloudflare Pages](https://pages.dev) projects using GitHub Actions_
 
-While Pages' API documentation is in development, this codebase is a glimpse at how to use the "Create deployment" endpoint to arbitrarily deploy existing projects, using GitHub Actions.
+While Cloudflare Pages' API documentation is in development, this codebase is a glimpse at how to use the "Create deployment" endpoint to arbitrarily deploy existing projects, using GitHub Actions.
 
 ## Setup
 
