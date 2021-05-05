@@ -10,6 +10,7 @@ jobs:
   deploy_project:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - run: deploy.sh
     env:
       CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
