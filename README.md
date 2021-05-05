@@ -14,4 +14,10 @@ While Pages' API documentation is in development, this codebase is a glimpse at 
 
 ## Usage
 
+### Workflow Dispatch (UI deployment)
+
 Visit the _Actions_ tab on your repository - you may need to manually enable Actions running on your repo fork. Once enabled, go to the "Deploy Pages project" workflow, and manually trigger a deploy in the UI, providing a project name to deploy.
+
+### Repository Dispatch (API/automatic deployment)
+
+You can automate deployments using this workflow via the `repository_dispatch` event. Send an API request to your repo's dispatch endpoint (`POST /repos/{owner}/{repo}/dispatches`), specifying a `project_name` inside of the `client_payload`. For an example cURL request, see [`examples/repository_dispatch.sh`](https://github.com/signalnerve/pages-trigger/tree/main/examples/repository_dispatch.sh).
