@@ -2,9 +2,7 @@
 
 _Ad-hoc deployments for [Cloudflare Pages](https://pages.dev) projects using GitHub Actions_
 
-While Cloudflare Pages' API documentation is in development, this codebase is a glimpse at how to use the "Create deployment" endpoint to arbitrarily deploy existing projects, using GitHub Actions.
-
-**NOTICE** The API used in this project is subject to change, don't rely on it yet for production workflows!
+This codebase allows you to use the "Create deployment" endpoint to arbitrarily deploy existing projects, using GitHub Actions.
 
 ## Setup
 
